@@ -29,9 +29,6 @@
         labels:
           traefik.enable: "{{ minio_available_externally | string }}"
           traefik.http.routers.minio.rule: "Host(`{{ minio_hostname }}.{{ ansible_nas_domain }}`)"
-          traefik.http.routers.minio.tls.certresolver: "letsencrypt"
-          traefik.http.routers.minio.tls.domains[0].main: "{{ ansible_nas_domain }}"
-          traefik.http.routers.minio.tls.domains[0].sans: "*.{{ ansible_nas_domain }}"
           traefik.http.services.minio.loadbalancer.server.port: "9000"
   when: minio_enabled is true
 

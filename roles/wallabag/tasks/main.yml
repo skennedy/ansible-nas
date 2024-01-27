@@ -29,9 +29,6 @@
         labels:
           traefik.enable: "{{ wallabag_available_externally | string }}"
           traefik.http.routers.wallabag.rule: "Host(`{{ wallabag_hostname }}.{{ ansible_nas_domain }}`)"
-          traefik.http.routers.wallabag.tls.certresolver: "letsencrypt"
-          traefik.http.routers.wallabag.tls.domains[0].main: "{{ ansible_nas_domain }}"
-          traefik.http.routers.wallabag.tls.domains[0].sans: "*.{{ ansible_nas_domain }}"
           traefik.http.services.wallabag.loadbalancer.server.port: "80"
   when: wallabag_enabled is true
 

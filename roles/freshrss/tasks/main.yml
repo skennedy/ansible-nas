@@ -27,9 +27,6 @@
         labels:
           traefik.enable: "{{ freshrss_available_externally | string }}"
           traefik.http.routers.freshrss.rule: "Host(`{{ freshrss_hostname }}.{{ ansible_nas_domain }}`)"
-          traefik.http.routers.freshrss.tls.certresolver: "letsencrypt"
-          traefik.http.routers.freshrss.tls.domains[0].main: "{{ ansible_nas_domain }}"
-          traefik.http.routers.freshrss.tls.domains[0].sans: "*.{{ ansible_nas_domain }}"
           traefik.http.services.freshrss.loadbalancer.server.port: "80"
   when: freshrss_enabled is true
 
