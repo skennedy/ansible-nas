@@ -72,9 +72,6 @@
         labels:
           traefik.enable: "{{ paperless_ng_available_externally | string }}"
           traefik.http.routers.paperless_ng.rule: "Host(`{{ paperless_ng_hostname }}.{{ ansible_nas_domain }}`)"
-          traefik.http.routers.paperless_ng.tls.certresolver: "letsencrypt"
-          traefik.http.routers.paperless_ng.tls.domains[0].main: "{{ ansible_nas_domain }}"
-          traefik.http.routers.paperless_ng.tls.domains[0].sans: "*.{{ ansible_nas_domain }}"
           traefik.http.services.paperless_ng.loadbalancer.server.port: "8080"
   when: paperless_ng_enabled is true
 

@@ -27,9 +27,6 @@
         labels:
           traefik.enable: "{{ couchdb_available_externally | string }}"
           traefik.http.routers.couchdb.rule: "Host(`{{ couchdb_hostname }}.{{ ansible_nas_domain }}`)"
-          traefik.http.routers.couchdb.tls.certresolver: "letsencrypt"
-          traefik.http.routers.couchdb.tls.domains[0].main: "{{ ansible_nas_domain }}"
-          traefik.http.routers.couchdb.tls.domains[0].sans: "*.{{ ansible_nas_domain }}"
           traefik.http.services.couchdb.loadbalancer.server.port: "5984"
   when: couchdb_enabled is true
 

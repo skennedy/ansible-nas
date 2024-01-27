@@ -68,9 +68,6 @@
         labels:
           traefik.enable: "{{ romm_available_externally | string }}"
           traefik.http.routers.romm.rule: "Host(`{{ romm_hostname }}.{{ ansible_nas_domain }}`)"
-          traefik.http.routers.romm.tls.certresolver: "letsencrypt"
-          traefik.http.routers.romm.tls.domains[0].main: "{{ ansible_nas_domain }}"
-          traefik.http.routers.romm.tls.domains[0].sans: "*.{{ ansible_nas_domain }}"
           traefik.http.services.romm.loadbalancer.server.port: "8080"
           homepage.group: Media
           homepage.name: Romm
