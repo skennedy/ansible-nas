@@ -1,0 +1,167 @@
+##                       ._____.   .__
+##  _____    ____   _____|__\_ |__ |  |   ____             ____ _____    ______
+##  \__  \  /    \ /  ___/  || __ \|  | _/ __ \   ______  /    \\__  \  /  ___/
+##   / __ \|   |  \\___ \|  || \_\ \  |_\  ___/  /_____/ |   |  \/ __ \_\___ \
+##  (____  /___|  /____  >__||___  /____/\___  >         |___|  (____  /____  >
+##       \/     \/     \/        \/          \/               \/     \/     \/
+##     a n s i b l e - n a s      https://github.com/davestephens/ansible-nas
+
+# Add your all.yml config overrides to this file. See group_vars/all.yml for all possible settings.
+
+# Example options
+ansible_nas_hostname: sk-hub
+ansible_nas_timezone: Europe/London
+ansible_nas_user: sk
+ansible_nas_email: sk4425@gmail.com
+ansible_nas_domain: skhub.cc
+samba_server_string: sk-hub
+
+# Fix for a python error
+ansible_pip_extra_args: "--break-system-packages"
+
+## Enable some applications
+homepage_enabled: true
+homepage_available_externally: true
+heimdall_enabled: true
+heimdall_available_externally: true
+portainer_enabled: true
+watchtower_enabled: true
+transmission_enabled: true
+transmission_available_externally: true
+plex_enabled: true
+plex_available_externally: true
+sonarr_enabled: true
+sonarr_available_externally: true
+radarr_enabled: true
+radarr_available_externally: true
+get_iplayer_enabled: false
+traefik_enabled: true
+traefik_cert: |
+  -----BEGIN CERTIFICATE-----
+  MIIEnDCCA4SgAwIBAgIUEm6n2+sKrJeHouHkExVV4sTn6LowDQYJKoZIhvcNAQEL
+  BQAwgYsxCzAJBgNVBAYTAlVTMRkwFwYDVQQKExBDbG91ZEZsYXJlLCBJbmMuMTQw
+  MgYDVQQLEytDbG91ZEZsYXJlIE9yaWdpbiBTU0wgQ2VydGlmaWNhdGUgQXV0aG9y
+  aXR5MRYwFAYDVQQHEw1TYW4gRnJhbmNpc2NvMRMwEQYDVQQIEwpDYWxpZm9ybmlh
+  MB4XDTI0MDEyNzE1MTYwMFoXDTM5MDEyMzE1MTYwMFowYjEZMBcGA1UEChMQQ2xv
+  dWRGbGFyZSwgSW5jLjEdMBsGA1UECxMUQ2xvdWRGbGFyZSBPcmlnaW4gQ0ExJjAk
+  BgNVBAMTHUNsb3VkRmxhcmUgT3JpZ2luIENlcnRpZmljYXRlMIIBIjANBgkqhkiG
+  9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtgT14zYe59HO03zOMTEjFxdy81Dm5dMNhF3U
+  H50BbyllAnN85HkEU0iLtfGxnR13VmI1EjI5YKgmYvdGB6RUt0q9wzV40Z3VMklo
+  v+jNaz7zErIQ0rri3/JG4vQDLAirE+R7aX00pH+lep+nEPMEht/Xs8lv/nywSkIm
+  RdXIl7S3TUg95sFkMc2fmSE3JnRvYVgZAwMiJFfFsr7PIarZvzr33B+Na2Nk8K6y
+  yr2A58i8K/VJDqrlM3hZAl/XD56gClR/hHm9Hu8+bnuurwHAOBDJqfMSd65WUd3E
+  RZc05/3RXXzPEB+VSkB8chD1xqpbH4gJYJXkxly5F8u/AuhsPQIDAQABo4IBHjCC
+  ARowDgYDVR0PAQH/BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEFBQcD
+  ATAMBgNVHRMBAf8EAjAAMB0GA1UdDgQWBBQKdyf0OIqbcAXPQqdscyXzKtj0pzAf
+  BgNVHSMEGDAWgBQk6FNXXXw0QIep65TbuuEWePwppDBABggrBgEFBQcBAQQ0MDIw
+  MAYIKwYBBQUHMAGGJGh0dHA6Ly9vY3NwLmNsb3VkZmxhcmUuY29tL29yaWdpbl9j
+  YTAfBgNVHREEGDAWggoqLnNraHViLmNjgghza2h1Yi5jYzA4BgNVHR8EMTAvMC2g
+  K6AphidodHRwOi8vY3JsLmNsb3VkZmxhcmUuY29tL29yaWdpbl9jYS5jcmwwDQYJ
+  KoZIhvcNAQELBQADggEBAInBQuO+k5fCo5MskWljrSIx07dWmfHmEDWRdnDXbeuF
+  +2fJKWc9XZ3URxd0/I1KvYWXBB/qWBZazs7wWehPu08x732lEY8e0vdjxeiuFX0g
+  EuXYFXx1EIzCm1wq3AfCIXpZLllqtZhslx60lqZAGgrskGnBFjrPYizXtkt3to8s
+  8aMwTyXXoaMgoju2ACRgvo6YEKUUJJxR+te05TwfJrckiZ+UHBCrku4IVVr4X1uC
+  L7P0lYIVzluqti+N728jhnF3qZUMzZL3t+MDG63t5KYFruciEGXOEeb2FdVQoHFC
+  A6PmvaTDUDZHrVmFBvWsxIxQ/mfbmeX0Ki9M2B7Tw5A=
+  -----END CERTIFICATE-----
+traefik_key: |
+  -----BEGIN PRIVATE KEY-----
+  MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC2BPXjNh7n0c7T
+  fM4xMSMXF3LzUObl0w2EXdQfnQFvKWUCc3zkeQRTSIu18bGdHXdWYjUSMjlgqCZi
+  90YHpFS3Sr3DNXjRndUySWi/6M1rPvMSshDSuuLf8kbi9AMsCKsT5HtpfTSkf6V6
+  n6cQ8wSG39ezyW/+fLBKQiZF1ciXtLdNSD3mwWQxzZ+ZITcmdG9hWBkDAyIkV8Wy
+  vs8hqtm/OvfcH41rY2TwrrLKvYDnyLwr9UkOquUzeFkCX9cPnqAKVH+Eeb0e7z5u
+  e66vAcA4EMmp8xJ3rlZR3cRFlzTn/dFdfM8QH5VKQHxyEPXGqlsfiAlgleTGXLkX
+  y78C6Gw9AgMBAAECggEAK7LpLZFyvgka9J9ECX9Yg1S33j6QEKEo35x/Ls/M5lkz
+  zPDZDSkYpr4F/Lp3/9ZxLiYJw8KXD+OOw7fF8lO7mv2wrUsLJJgV9Sq2oUxM9PB5
+  /wUNEOqZSVarOhWHJW03VWFHV74dg1i568SkoWcWsSLQcHNuFdTtpgZXlfCLZhAu
+  fNH+66wFYuZk3OdTLeAjWY7DgGEE4AckgThyWiBk/K2T3klkOolU6rBvfMHO6hI+
+  SdvjugKQamUai/mXcDU7FIPB6O7LHGllMLghAyApEStBCcYbqjdDZoq+g0hFNNXz
+  TlXmnqf8WATTFXo6I35PuaJ4PrH/oS5RRcjTKqyjAQKBgQDz8A97Dt4LCovC5sfJ
+  UgbVeFpPu4ujqBqUItAMcSbtnelXFK3oxck3ztsktO3JFwCeDf+9gmZP4NDm1yAy
+  Mr3jvEPBCnLzYV9cnt53VQdTEu69s8rassIxdO7qePzX4V9BF9W0aAffFUM+tGKV
+  IVfI/T7a7eLVXNwrt6mukUA54QKBgQC/BRfEzRoITnkF31m4dZUNsihuJVKjJFh0
+  TEOzD32GtwfhmlqpK9dMFAofltC7bffqHWcvXGU3CTeFrQ1pBe8IW32/3Vzbt05R
+  hbl/q3EZp+CizgxGNlANFCcY1KkQX7KjmMZ9ms5ZG2zvvDpgCDURoWNIAZ2T7rF8
+  jNfB9pcV3QKBgQDIuy1x/Pz4pvf1LQUQBCC9fukKHXE9/bHJXpBG/MGk3MHLt6eY
+  GVGIS/8GyJ+3TudiKHDe2DQq3PvqSPIkfJ7HjP9QFbIb1m+rfsvf9KcvVDADCLUP
+  m/Oy0N9dMKwXVUyV+vAPIWAA0bVhHvzUbPiY2tPjQcfb/SrsCpllnf704QKBgBZq
+  t5Zd538wDl3VD0dpbRuVW89JTABfRI4pYQyDddy4YBFmttsBjRudgm6gmVBVoHF2
+  D+Tr9+jUiRKD833ut1WIvyIkDUCvq14/zjwgV36GSANzINegihZu1gPA+TI1uNYg
+  GLMm1q54XHlp4oPgkrHF+cu6fM6ehW+za6KUmLh1AoGAE4Qqaio/7TZ+MztySRv0
+  SZPs8GZrKbbEYyrHyxCLaelkd+YTiveCv0X2eevNfyRcSaRO6k7KzlOn037C6rv0
+  HLBdHuhKpJQMKk6w7e6WMbBjEMj3H/rJ55mPtL5rIYYxD82BK4mGL2WMhmSSGr4g
+  xSoR7lJyVho5ciWNixx8kJc=
+  -----END PRIVATE KEY-----
+
+
+traefik_environment_variables:
+  CF_API_EMAIL: "sk4425@gmail.com"
+  CF_DNS_API_TOKEN: "hpxLhL-StpcHFGbRj4cgHtGGNpwaONJsMX3Dhyyb"
+traefik_log_level: "TRACE"
+jackett_enabled: true
+jellyfin_enabled: true
+jellyfin_available_externally: true
+cloudflared_enabled: true
+cloudflared_token: eyJhIjoiMjBlOWZiZjczNjIyOWQ2N2JmNTUzNDlhNmQxN2FlYzYiLCJ0IjoiMjk4MWRmMzQtYzhmOC00NGQ5LTllYTAtNGMwMmI5Njc3OTg3IiwicyI6IllUSTJNV1E0TUdZdFpUSXlNaTAwWkRBeUxUaGlNVGN0TldVNVpUTTNPV0V5TlRobSJ9
+
+docker_home: /opt/docker
+
+samba_shares_root: /dozer
+photos_root: /tank/photos
+
+samba_shares:
+  - name: downloads
+    comment: 'Stuff downloaded'
+    guest_ok: yes
+    public: yes
+    writable: yes
+    browsable: yes
+    path: "{{ downloads_root }}"
+
+  - name: movies
+    comment: 'Movies'
+    guest_ok: yes
+    public: yes
+    writable: yes
+    browsable: yes
+    path: "{{ movies_root }}"
+
+  - name: tv
+    comment: 'TV Episodes'
+    guest_ok: yes
+    public: yes
+    writable: yes
+    browsable: yes
+    path: "{{ tv_root }}"
+
+  - name: music
+    comment: 'Music'
+    guest_ok: yes
+    public: yes
+    writable: yes
+    browsable: yes
+    path: "{{ music_root }}"
+
+  - name: photos
+    comment: 'Photos'
+    guest_ok: yes
+    public: yes
+    writable: yes
+    browsable: yes
+    path: "{{ photos_root }}"
+
+# cloudflare_ddns_enabled: true
+# cloudflare_token: "hpxLhL-StpcHFGbRj4cgHtGGNpwaONJsMX3Dhyyb"
+
+syncthing_enabled: true
+syncthing_available_exterally: true
+syncthing_volumes:
+  - "{{ syncthing_data_directory }}:/var/syncthing/"
+  - "{{ photos_root }}:/var/media/photos"
+syncthing_user_id: "1000"
+syncthing_group_id: "1000"
+
+homeassistant_enabled: true
+homeassistant_available_exterally: true
+
