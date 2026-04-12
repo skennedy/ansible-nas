@@ -265,6 +265,10 @@
     - role: mumble
       tags:
         - mumble
+    
+    - role: musicassistant
+      tags: 
+        - musicassistant
 
     - role: mylar
       tags:

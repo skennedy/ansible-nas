@@ -1,0 +1,27 @@
+---
+musicassistant_enabled: false
+musicassistant_available_externally: false
+
+# directories
+musicassistant_data_directory: "{{ docker_home }}/musicassistant"
+musicassistant_podcasts_directory: "{{ podcasts_root }}"
+musicassistant_music_directory: "{{ music_root }}"
+musicassistant_audiobooks_directory: "{{ audiobooks_root }}"
+
+musicassistant_podcasts_permissions: "rw"
+musicassistant_music_permissions: "rw"
+musicassistant_audiobooks_permissions: "rw"
+
+# network
+musicassistant_hostname: "musicassistant"
+
+# docker
+musicassistant_container_name: "musicassistant"
+musicassistant_image_name: "ghcr.io/music-assistant/server"
+musicassistant_image_version: latest
+
+# logging
+musicassistant_log_level: "info"
+
+# specs
+musicassistant_memory: 2g
