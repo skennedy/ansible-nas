@@ -165,3 +165,5 @@ syncthing_group_id: "1000"
 homeassistant_enabled: true
 homeassistant_available_exterally: true
 
+esphome_enabled: true
+
