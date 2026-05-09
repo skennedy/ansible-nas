@@ -166,6 +166,7 @@ homeassistant_enabled: true
 homeassistant_available_exterally: true
 
 esphome_enabled: true
+esphome_available_externally: true
 
 musicassistant_enabled: true
 musicassistant_available_exterally: true
