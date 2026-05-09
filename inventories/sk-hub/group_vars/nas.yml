@@ -167,3 +167,5 @@ homeassistant_available_exterally: true
 
 esphome_enabled: true
 
+musicassistant_enabled: true
+musicassistant_available_exterally: true
