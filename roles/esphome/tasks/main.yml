@@ -11,7 +11,7 @@
     - name: EspHome Docker Container
       community.docker.docker_container:
         name: "{{ esphome_container_name }}"
-        image: ghcr.io/esphome/esphome:latest
+        image: "ghcr.io/esphome/esphome:{{ esphome_version }}"
         pull: true
         volumes:
           - "{{ esphome_data_directory }}:/config:rw"
