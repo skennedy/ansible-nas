@@ -164,6 +164,8 @@ syncthing_group_id: "1000"
 
 homeassistant_enabled: true
 homeassistant_available_externally: true
+homeassistant_devices:
+  - "/dev/serial/by-id/usb-1a86_USB_Serial-if00-port0:/dev/ttyUSB0"
 
 esphome_enabled: true
 esphome_available_externally: true
