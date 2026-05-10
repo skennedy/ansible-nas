@@ -168,6 +168,7 @@ homeassistant_devices:
   - "/dev/serial/by-id/usb-1a86_USB_Serial-if00-port0:/dev/ttyUSB0"
 
 esphome_enabled: true
+esphome_version: dev
 esphome_available_externally: true
 
 musicassistant_enabled: true
