@@ -163,10 +163,10 @@ syncthing_user_id: "1000"
 syncthing_group_id: "1000"
 
 homeassistant_enabled: true
-homeassistant_available_exterally: true
+homeassistant_available_externally: true
 
 esphome_enabled: true
 esphome_available_externally: true
 
 musicassistant_enabled: true
-musicassistant_available_exterally: true
+musicassistant_available_externally: true
