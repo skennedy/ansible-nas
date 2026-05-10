@@ -14,5 +14,8 @@ homeassistant_container_name: "homeassistant"
 homeassistant_image_name: "homeassistant/home-assistant"
 homeassistant_image_version: latest
 
+# devices
+homeassistant_devices: []
+
 # specs
 homeassistant_memory: 1g

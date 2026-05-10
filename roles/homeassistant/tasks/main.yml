@@ -23,6 +23,7 @@
           traefik.enable: "{{ homeassistant_available_externally | string }}"
           traefik.http.routers.homeassistant.rule: "Host(`{{ homeassistant_hostname }}.{{ ansible_nas_domain }}`)"
           traefik.http.services.homeassistant.loadbalancer.server.port: "8123"
+        devices: "{{ homeassistant_devices }}"
         memory: "{{ homeassistant_memory }}"
   when: homeassistant_enabled is true
 
